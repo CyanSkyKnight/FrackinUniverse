@@ -1,0 +1,21 @@
+{
+  "metadata" : {
+    "name" : "fu_byosmothship",
+    "species" : "avian",
+    "rules" : [],
+    "protected" : false,
+    "anchor" : [ "fu_byosmothship"],
+    "maxRadius" : 256,
+    "maxParts" : 1
+  },
+
+  "parts" : [
+    {
+      "name" : "fu_byosmothship",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "fu_byosmothship.json" ]
+    }
+  ]
+}

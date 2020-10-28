@@ -7,6 +7,9 @@ function init()
   --self.species = world.entitySpecies(entity.id())
   self.timer = 0
   self.boostSpeed = 8
+  self.wingTimer = 0
+  self.wingIsUp = false
+  self.wingflapTime = 0.3
   self.active=false
   self.available = true
   self.forceDeactivateTime = 3
@@ -61,7 +64,8 @@ function update(args)
     --enable air physics
     mcontroller.controlParameters(config.getParameter("fallingParameters"))
     mcontroller.setYVelocity(math.max(mcontroller.yVelocity(), config.getParameter("maxFallSpeed")))  
-
+	--animate wings
+    flapWings(args.dt)
     -- boost in direction pressed
     local direction = {0, 0} -- set default
     if self.upVal then direction[2] = direction[2] + 1 end     
@@ -131,6 +135,22 @@ function checkForceDeactivate(dt)
   end
 end
 
+function flapWings(dt)
+  if self.active then
+  self.wingTimer = self.wingTimer + dt
+    if self.wingTimer >= self.wingflapTime then 
+        self.wingTimer = 0
+		
+		if self.wingIsUp == true then
+		  tech.setParentState("fall")
+		  self.wingIsUp = false
+		else
+		  tech.setParentState("fly")
+		  self.wingIsUp = true
+		end
+    end
+   end
+end
 function activate()
   if not self.active then
         animator.playSound("activate") 
@@ -143,6 +163,7 @@ function deactivate()
     status.clearPersistentEffects("glide") 
     animator.setParticleEmitterActive("feathers", false)
     self.boostSpeed = 8
+    tech.setParentState()
     status.addEphemeralEffects{{effect = "nofalldamage", duration = 2}}
   end
   self.active = false  

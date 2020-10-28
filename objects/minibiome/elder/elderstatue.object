@@ -23,6 +23,6 @@
     }
   ],
   "biomePlaced" : true,
-  "collectablesOnPickup" : { "fu_elderrelics" : "elderstatue" },    
+      
   "statusEffects"  : [ "madnessgainelder3" ]
 }

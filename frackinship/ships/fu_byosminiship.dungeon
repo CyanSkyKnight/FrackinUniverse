@@ -1,0 +1,21 @@
+{
+  "metadata" : {
+    "name" : "fu_byosminiship",
+    "species" : "hylotl",
+    "rules" : [],
+    "protected" : false,
+    "anchor" : [ "fu_byosminiship"],
+    "maxRadius" : 256,
+    "maxParts" : 1
+  },
+
+  "parts" : [
+    {
+      "name" : "fu_byosminiship",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "fu_byosminiship.json" ]
+    }
+  ]
+}

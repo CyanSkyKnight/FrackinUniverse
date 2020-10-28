@@ -6,7 +6,7 @@
 
     },
  "spacing":0,
- "tilecount":8,
+ "tilecount":9,
  "tileheight":80,
  "tileproperties":
     {
@@ -89,6 +89,16 @@
          "imagePositionY":"0",
          "object":"fu_byosteleporter",
          "tilesetDirection":"right"
+        },
+     "8":
+        {
+         "\/\/description":"Trusty teleporter, what would we do without you? Sets your ship spawn.",
+         "\/\/name":"fu_byossmallteleporter",
+         "\/\/shortdescription":"Small Spawn Teleporter",
+         "imagePositionX":"-32",
+         "imagePositionY":"0",
+         "object":"fu_byossmallteleporter",
+         "tilesetDirection":"right"
         }
     },
  "tiles":
@@ -124,6 +134,10 @@
      "7":
         {
          "image":"..\/..\/..\/..\/tiled\/packed\/objects\/teleporter.png"
+        },
+     "8":
+        {
+         "image":"..\/..\/..\/..\/tiled\/frackinuniverse-custom\/objects\/byos\/fu_byossmallteleporterlit.png"
         }
     },
  "tilewidth":64

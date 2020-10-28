@@ -11,7 +11,7 @@
   "itemTags" : ["weapon","melee","axe", "upgradeableWeapon"],
   "level" : 3,
   "inventoryIcon" : "bountyaxe.png",
-  //"collectablesOnPickup" : { "fu_weaponaxe" : "bountyaxe" },
+  //
   "animation" : "axe.animation",
   "animationParts" : {
     "blade" : "bountyaxe.png",

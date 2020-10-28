@@ -12,7 +12,7 @@
   "weaponType" : "Bitchin' Tunes",
   "itemTags" : ["weapon","melee","axe", "upgradeableWeapon"],
   "inventoryIcon" : "flyingv.png",
-  "collectablesOnPickup" : { "fu_weaponhammer" : "zerchesiumhammer" },
+  
   "animation" : "hammer.animation",
   "animationParts" : {
     "handle" : "",
